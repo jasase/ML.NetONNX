@@ -6,20 +6,30 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="model\" />
     <Folder Include="images\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ML" Version="1.4.0" />
+    <PackageReference Include="Microsoft.ML" Version="1.5.0-preview" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.5.0-preview" />
+    <PackageReference Include="Microsoft.ML.OnnxTransformer" Version="1.5.0-preview" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="images\clock.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="images\cup.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="images\elephant.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="model\model.onnx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="model\resnet50v2.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
